@@ -18,11 +18,11 @@ class Description : AppCompatActivity() {
         with(binding){
             val title=intent.getStringExtra("title")
             val description=intent.getStringExtra("description")
-            val imageUrl=intent.getStringExtra("image_url")
+            val image=intent.getStringExtra("image")
 
             dpProductTitle.text=title
             productDes.text=description
-            Picasso.get().load(imageUrl).into(dpProductPic)
+            Picasso.get().load(image).into(dpProductPic)
         }
 
     }
